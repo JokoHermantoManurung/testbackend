@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Guest Book{% endblock title %}
+
+{% block content %}
+    <h2 class="text-center">Daftar Tamu</h2>
+    {% for guestbook in object_list %}
+
+
+        <div class="card">
+        <div class="card-reader text-center">
+            <span class="font-weight-bold">{{ guestbook.nama }}</span>
+        </div>
+         <div class="text-center card-body">
+             Alamat : {{ guestbook.alamat }}
+
+        </div>
+         <div class="card-footer text-center text-muted">
+            <span class="text-muted">Email : {{ guestbook.email }}</span>
+        </div>
+
+    </div>
+    </br>
+
+    {% endfor %}
+
+{% endblock content %}
